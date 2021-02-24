@@ -2,4 +2,10 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
 
-createApp(App).mount('#app')
+var app = createApp(App)
+
+app.component('v-style', {
+    template: '<style><slot></slot></style>'
+})
+
+app.mount('#app')

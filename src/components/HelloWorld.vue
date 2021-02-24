@@ -124,7 +124,7 @@ export default {
         var self = this;
 
         this.$nextTick(function () {
-            var sampleHtml = self.$refs.sampleTableWrapper.innerHTML;
+            var sampleHtml = self.$refs.sampleTableWrapper.innerHTML.innerHTML.replace(/<!---->/g, '').replace(/ data.*?="">/g, '>');
             self.sampleHtml = sampleHtml;
         });
     },

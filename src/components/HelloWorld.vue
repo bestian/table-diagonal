@@ -12,16 +12,6 @@
                         <input type="text" id="rowTitle" v-model="rowTitle" class="form-control mb-1 mr-sm-1"
                             placeholder="列標題" />
                     </div>
-                    <fieldset class="form-inline justify-content-center">
-                        <label class="mb-1 mr-sm-1">方向：</label>
-                        <div class="form-check mb-1 mr-sm-1" v-for="direction in directions" :key="direction.value">
-                            <input class="form-check-input" type="checkbox" :id="'direction-' + direction.value"
-                                :value="direction.value" v-model="selectedDirections">
-                            <label class="form-check-label" :for="'direction-' + direction.value">
-                                {{ direction.name }}
-                            </label>
-                        </div>
-                    </fieldset>
                 </div>
                 <div class="col-lg border p-2">
                     <h5>範例表格</h5>
